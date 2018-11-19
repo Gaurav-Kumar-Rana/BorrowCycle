@@ -1,0 +1,14 @@
+@media screen and (max-width: 480px) {
+    .App{
+      .btn-panel{
+        .btn, button{
+          width: 85%;
+          margin: 0px;
+          margin-bottom: 20px;
+        }
+      }
+      .login-panel {
+        max-width: 80%;
+      }
+    }
+  }

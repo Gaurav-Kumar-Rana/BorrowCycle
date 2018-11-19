@@ -1,28 +1,30 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './common/header';
+import PropTypes from 'prop-types';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Login from './common/login';
+import Register from './common/register';
+import Home from './common/home';
+import Start from './common/start';
+import websettings from './assets/websettings';
 
 class App extends Component {
   render() {
+    const {classes} = this.props;
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Router>
+        <div className={"App " + websettings.header.navbar_color}>
+            <Header/>
+            <Route path="/" exact component={Start} />
+            <Route path="/home" component={Home} />
+            <Route path="/login" component={Login} />
+            <Route path="/register" component={Register} />
+        </div>
+      </Router>
     );
   }
 }
-
+App.propTypes = {
+  classes:PropTypes.object,
+}
 export default App;

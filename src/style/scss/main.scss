@@ -1,0 +1,135 @@
+
+//Navbar Variables
+$font-color:#FFF;
+$bg-color:#282c34;
+$secondry-color:#0095ff;
+$topmenu-height:50px;
+//Utility Classes
+
+.disp-table{
+    display: table;
+    width: 100%;
+    height: 100%;
+    .disp-table-cell{
+      display: table-cell;
+      vertical-align: middle;
+      margin: 0px auto;
+      text-align: center;
+    }
+}
+.btn-panel{
+  .btn, button{
+    margin-right: 10px;
+    min-width: 200px;
+    border-radius: 2px;
+    &:last-child{
+      margin-right:0px; 
+    }
+  }
+}
+.btn-skip {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+}
+.pos-relative{
+  position:relative;
+}
+.App {
+  text-align: center;
+  &.dark{
+    //dark Start
+    .navbar-default{
+      //navbar-default Start
+      width: 100%;
+      border-radius: 0px;
+      background: $bg-color;
+      border: 0px;
+      margin: 0px;
+      .navbar-brand{
+        //navbar-brand Start
+        color:$font-color;
+      }//navbar-brand End
+      .navbar-nav{
+        & > li{
+          & > a{
+            color:$font-color;
+            &:hover,&:focus,&:active{
+              background: $bg-color;
+              background-color:$secondry-color;
+            }
+
+          }
+        }
+        & > .open{
+          & > a{
+            background-color: $bg-color;
+            &:hover,&:focus,&:active{
+              background-color:$secondry-color;
+            }
+          }
+        }
+      }
+    }//navbar-default End
+    .navbar-collapse{//navbar-collapse Start
+      border-top-width: 0px;
+    }//navbar-collapse End
+  }//dark End
+  .App-home-container{//App-home-container Start
+    height: calc(100vh - #{$topmenu-height});
+    position:relative;
+    .carousel{
+      height: calc(100%);
+    }
+    .carousel-indicators {
+      li{
+        border: 1px solid $bg-color;
+      }
+      .active{
+        background-color: $bg-color;
+      }
+    }
+    .carousel-control.left,.carousel-control.right{
+      background-image:none;
+    }
+    .carousel-inner {
+      height: 100%;
+      & > .item{
+        height: 100%;
+        &:first-child{
+          background-color:#ff4d4d;
+        }&:nth-child(2){
+          background-color:#45da56;
+        }
+        &:nth-child(3){
+          background-color:#4d65ff;
+        }
+      }
+    }
+  }//App-home-container End
+
+  .login-panel {
+    max-width: 500px;
+    margin: 50px auto;
+    text-align: left;
+    .show-passowrd-icon{
+      cursor: pointer;
+      background: #fff;
+      border-left: 0px;
+      left: 0px;
+      z-index: 10;
+    }
+  }
+  //Bootstrap Override styles
+  .input-group{
+    width: 100%;
+  }
+  .App-register-container{//App-register-container Start
+    h4 + .show-grid{
+      margin-top: 25px;
+    }
+  }//App-register-container End
+}
+
+@import 'mediaCss.scss';
+

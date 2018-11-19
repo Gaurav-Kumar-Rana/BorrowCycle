@@ -1,0 +1,91 @@
+.disp-table {
+  display: table;
+  width: 100%;
+  height: 100%; }
+  .disp-table .disp-table-cell {
+    display: table-cell;
+    vertical-align: middle;
+    margin: 0px auto;
+    text-align: center; }
+
+.btn-panel .btn, .btn-panel button {
+  margin-right: 10px;
+  min-width: 200px;
+  border-radius: 2px; }
+  .btn-panel .btn:last-child, .btn-panel button:last-child {
+    margin-right: 0px; }
+
+.btn-skip {
+  position: absolute;
+  top: 10px;
+  right: 14px; }
+
+.pos-relative {
+  position: relative; }
+
+.App {
+  text-align: center; }
+  .App.dark .navbar-default {
+    width: 100%;
+    border-radius: 0px;
+    background: #282c34;
+    border: 0px;
+    margin: 0px; }
+    .App.dark .navbar-default .navbar-brand {
+      color: #FFF; }
+    .App.dark .navbar-default .navbar-nav > li > a {
+      color: #FFF; }
+      .App.dark .navbar-default .navbar-nav > li > a:hover, .App.dark .navbar-default .navbar-nav > li > a:focus, .App.dark .navbar-default .navbar-nav > li > a:active {
+        background: #282c34;
+        background-color: #0095ff; }
+    .App.dark .navbar-default .navbar-nav > .open > a {
+      background-color: #282c34; }
+      .App.dark .navbar-default .navbar-nav > .open > a:hover, .App.dark .navbar-default .navbar-nav > .open > a:focus, .App.dark .navbar-default .navbar-nav > .open > a:active {
+        background-color: #0095ff; }
+  .App.dark .navbar-collapse {
+    border-top-width: 0px; }
+  .App .App-home-container {
+    height: calc(100vh - 50px);
+    position: relative; }
+    .App .App-home-container .carousel {
+      height: calc(100%); }
+    .App .App-home-container .carousel-indicators li {
+      border: 1px solid #282c34; }
+    .App .App-home-container .carousel-indicators .active {
+      background-color: #282c34; }
+    .App .App-home-container .carousel-control.left, .App .App-home-container .carousel-control.right {
+      background-image: none; }
+    .App .App-home-container .carousel-inner {
+      height: 100%; }
+      .App .App-home-container .carousel-inner > .item {
+        height: 100%; }
+        .App .App-home-container .carousel-inner > .item:first-child {
+          background-color: #ff4d4d; }
+        .App .App-home-container .carousel-inner > .item:nth-child(2) {
+          background-color: #45da56; }
+        .App .App-home-container .carousel-inner > .item:nth-child(3) {
+          background-color: #4d65ff; }
+  .App .login-panel {
+    max-width: 500px;
+    margin: 50px auto;
+    text-align: left; }
+    .App .login-panel .show-passowrd-icon {
+      cursor: pointer;
+      background: #fff;
+      border-left: 0px;
+      left: 0px;
+      z-index: 10; }
+  .App .input-group {
+    width: 100%; }
+  .App .App-register-container h4 + .show-grid {
+    margin-top: 25px; }
+
+@media screen and (max-width: 480px) {
+  .App .btn-panel .btn, .App .btn-panel button {
+    width: 85%;
+    margin: 0px;
+    margin-bottom: 20px; }
+  .App .login-panel {
+    max-width: 80%; } }
+
+/*# sourceMappingURL=main.css.map */
